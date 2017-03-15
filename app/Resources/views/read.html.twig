@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table class="u-full-width">
+    <thead>
+    <tr>
+        <th>Console</th>
+        <th>Last Update</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for console in consoles %}
+        <tr>
+            <td>{{ console.name }}</td>
+            <td>{{ console.updatedAt|date('Y-m-d') }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    <a class="button" href="/">Back</a>
+{% endblock %}
+
+
+
